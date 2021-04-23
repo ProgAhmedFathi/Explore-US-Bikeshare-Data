@@ -70,12 +70,12 @@ def load_data(city: str, month: str, day: str) -> pd.DataFrame:
 
     # create columns for month and day.
     df['month'] = df['Start Time'].dt.month
-    df['day_of_week'] = df['Start Time'].dt.day_name
+    df['day_of_week'] = df['Start Time'].dt.day_name()
 
     # filter by month.
     if month != 'all':
-        month = ['january', 'february', 'march', 'april', 'may', 'june']
-        month = month.index(month) + 1
+        months = ['january', 'february', 'march', 'april', 'may', 'june']
+        month = months.index(month) + 1
 
         # create new dataframe by the selected month.
         df = df[df['month'] == month]
@@ -97,18 +97,16 @@ def time_stats(df) -> None:
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
     # TO DO: display the most common month
-    # -----df['month'] = df['Start Time'].dt.month
-    common_month = df['month'].mode()[0]
+    common_month = df['month'].mode()
     print(f'The common month is {common_month}')
 
     # TO DO: display the most common day of week
-    # ----df['day_of_week'] = df['Start Time'].dt.day_name
-    common_day = df['day_of_week'].mode()[0]
+    common_day = df['day_of_week'].mode()
     print(f'The common day is {common_day}')
 
     # TO DO: display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
-    common_start_hour = df['hour'].mode()[0]
+    common_start_hour = df['hour'].mode()
     print(f'The common start hour is {common_start_hour}')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -122,16 +120,16 @@ def station_stats(df) -> None:
     start_time = time.time()
 
     # TO DO: display most commonly used start station
-    common_start_station = df['Start Station'].mode()[0]
+    common_start_station = df['Start Station'].mode()
     print(f'The most common start station is {common_start_station}')
 
     # TO DO: display most commonly used end station
-    common_end_station = df["End Station"].mode()[0]
+    common_end_station = df["End Station"].mode()
     print(f"The most common end station is {common_end_station}")
 
     # TO DO: display most frequent combination of start station and end station trip
     df['combination'] = df['Start Station'] + " " + df['End Station']
-    most_frequent_station = df['combination']
+    most_frequent_station = df['combination'].mode()[0]
     print(most_frequent_station)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -192,6 +190,24 @@ def user_stats(df) -> None:
     print('-'*40)
 
 
+def display_data(data_frame) -> None:
+    """Display the rows of the dataFrame if the user want, show 5 rows by 5 rows"""
+
+    # Ask the user if want to show rows from the dataFrame.
+    view_data = input("Do you want to show the first 5 rows of the data?\n yes or no.").lower()
+
+    start = 0
+    while view_data == "yes":
+        # Display the first 5 rows of the dataFrame.
+        print(data_frame.iloc[start: start + 5])
+
+        # Ask the user if want the display the next 5 dataFrame rows.
+        view_data = input("show an other the next 5 rows?\n yes or no").lower()
+
+        # Add 5 to the start value to do an other iteration.
+        start += 5
+
+
 def main():
     while True:
         city, month, day = get_filters()
@@ -201,6 +217,8 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
+
+        display_data(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
