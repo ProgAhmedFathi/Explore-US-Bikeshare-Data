@@ -1,16 +1,17 @@
 # Explore US Bikeshare Data
 #### The 1st project in the [egFWD scholarship](https://egfwd.com) for Data Analysis **Professional** Nanodegree Program from Udacity.
+<ins>These projects REVIEWED by Udacity reviewers (real persons) according to Project Rubric, and the projects MUST "meet the specifications" or "exceed specifications" in each category in order for my submission to pass.</ins>
 
 ## About the project
 In this project, I wrote Python code to import US bikeshare data and answered interesting questions about it by computing descriptive statistics. I also wrote a script that took in raw input to create an interactive experience in the terminal to present these statistics.
 
 ## The Dataset
-In this project, I used data provided by Motivate, a bike share system provider for many major cities in the United States, to uncover bike share usage patterns. You will compare the system usage between three large cities: Chicago, New York City, and Washington, DC.
+In this project, I used data provided by "Motivate", a bike share system provider for many major cities in the United States, to uncover bike share usage patterns. You will compare the system usage between three large cities: Chicago, New York City, and Washington DC.
 
 You can find the dataset which I used on this link [Dataset](https://video.udacity-data.com/topher/2018/August/5b7b7aca_bikeshare-2/bikeshare-2.zip)
 
-### About the dataset
-Randomly selected data for the first six months of 2017 are provided for all three cities. All three of the data files contain the same core six (6) columns:
+### About the Dataset
+Data randomly selected data for the first six months of 2017 are provided for all three cities. All three of the data files contain the same core 6 columns:
 - Start Time (e.g., 2017-01-01 00:07:57)
 - End Time (e.g., 2017-01-01 00:20:53)
 - Trip Duration (in seconds - e.g., 776)
