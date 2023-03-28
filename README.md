@@ -1,5 +1,5 @@
 # Explore US Bikeshare Data
-The 1st project in the [egFWD scholarship](https://egfwd.com) for Data Analysis **Professional** Nanodegree Program from Udacity.
+#### The 1st project in the [egFWD scholarship](https://egfwd.com) for Data Analysis **Professional** Nanodegree Program from Udacity.
 
 ## About the project
 In this project, I wrote Python code to import US bikeshare data and answered interesting questions about it by computing descriptive statistics. I also wrote a script that took in raw input to create an interactive experience in the terminal to present these statistics.
