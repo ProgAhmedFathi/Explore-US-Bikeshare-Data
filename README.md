@@ -1,5 +1,5 @@
 # Explore US Bikeshare Data
-The 1st project in the [egFWD scholarship] (https://egfwd.com) for Data Analysis **Professional** Nanodegree Program.
+The 1st project in the [egFWD scholarship](https://egfwd.com) for Data Analysis **Professional** Nanodegree Program.
 
 ## About the project
 In this project, I wrote Python code to import US bikeshare data and answered interesting questions about it by computing descriptive statistics. I also wrote a script that took in raw input to create an interactive experience in the terminal to present these statistics.
@@ -24,29 +24,25 @@ The Chicago and New York City files also have the following two columns:
 
 Statistics Computed
 
-You will learn about bike share use in Chicago, New York City, and Washington by computing a variety of descriptive statistics. In this project, you'll write code to provide the following information:
+I learned about bike share use in Chicago, New York City, and Washington by computing a variety of descriptive statistics. In this project, I wrote code to provide the following information:
 
-#1 Popular times of travel (i.e., occurs most often in the start time)
+1. Popular times of travel (i.e., occurs most often in the start time):
+    - most common month
+    - most common day of week
+    - most common hour of day
 
-    most common month
-    most common day of week
-    most common hour of day
+2. Popular stations and trip:
+    - most common start station
+    - most common end station
+    - most common trip from start to end (i.e., most frequent combination of start station and end station)
 
-#2 Popular stations and trip
+3. Trip duration:
+    - total travel time
+    - average travel time
 
-    most common start station
-    most common end station
-    most common trip from start to end (i.e., most frequent combination of start station and end station)
-
-#3 Trip duration
-
-    total travel time
-    average travel time
-
-#4 User info
-
-    counts of each user type
-    counts of each gender (only available for NYC and Chicago)
-    earliest, most recent, most common year of birth (only available for NYC and Chicago)
+4. User info:
+    - counts of each user type
+    - counts of each gender (only available for NYC and Chicago)
+    - earliest, most recent, most common year of birth (only available for NYC and Chicago)
 
 
